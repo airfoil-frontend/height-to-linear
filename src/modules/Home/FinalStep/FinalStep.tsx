@@ -47,7 +47,7 @@ export const FinalStep = () => {
         const response = await createIssue.mutateAsync({
           title: issue.tasks,
           description: issue.description,
-          estimate: Number(issue.estimate),
+          estimate: Number(issue.estimate.toFixed(0)),
           teamId: linear.teamId,
           projectId: linear.projectId,
           priority: Number(priority),
